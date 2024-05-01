@@ -1,0 +1,88 @@
+@import "variables";
+
+body {
+    background: $primarycolor;
+    font-family: $fontfamily;
+    margin: 0px;
+    height: 100vh;
+
+    .outter {
+        display: flex;
+        flex-direction: column;
+
+        header {
+            text-align: center;
+            background: $secoundary;
+            color: $whitecolor;
+            font-size: 60px;
+            padding: 15px;
+        }
+
+        .data {
+            padding: 20px;
+            margin: 15px;
+            background: $secoundary;
+            flex-grow: 1;
+
+            .form-content {
+                gap: 10px;
+                display: flex;
+
+                .form-data {
+                    width: 100%;
+
+                    input {
+                        width: 98%;
+                        padding: 15px;
+                        font-size: 20px;
+                        border-radius: 10px;
+                        border: 1px solid $primarycolor ;
+
+                    }
+                }
+
+                button {
+                    padding: 15px;
+                    background-color: $primarycolor;
+                    border-radius: 10px;
+                    color: $secoundary;
+                    font-size: 20px;
+                    border: 1px solid $secoundary;
+                    cursor: pointer;
+                }
+
+
+
+
+
+            }
+
+
+        }
+
+        .details {
+            h2 {
+                color: $whitecolor;
+            }
+
+            .entry {
+                background: $primarycolor;
+                padding: 30px;
+                border: 1px solid $secoundary;
+                border-radius: 10px;
+                margin: 10px;
+
+                p {
+                    font-size: 20px;
+                    text-align: justify;
+                    line-height: 32px;
+                }
+            }
+        }
+
+    }
+
+
+
+
+}
