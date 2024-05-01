@@ -39,6 +39,15 @@ body {
                         border: 1px solid $primarycolor ;
 
                     }
+
+                    textarea {
+                        width: 98%;
+                        height: 160px;
+                        border-radius: 10px;
+                        border: 1px solid $primarycolor ;
+                        font-size: 20px;
+                        padding: 15px;
+                    }
                 }
 
                 button {
@@ -63,6 +72,8 @@ body {
         .details {
             h2 {
                 color: $whitecolor;
+                font-size: 30px;
+
             }
 
             .entry {

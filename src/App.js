@@ -8,9 +8,10 @@ function App() {
         <div className="form-content">
           <div className="form-data">
             <input placeholder="Enter Your Task" />
+            <p><textarea placeholder="Enter Description"></textarea></p>
+            <button>Save</button>
           </div>
           <div>
-            <button>Save</button>
           </div>
         </div>
         <div className="details">
