@@ -1,17 +1,25 @@
 import { useEffect, useState } from "react";
 import "./style.scss"
-import ApiExe from "./services/ApiCallong";
+import ApiExe from "./services/ApiCalling";
+import axios from "axios";
 
 function App() {
   //use state
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   async function fetchItems() {
+    // axios.get("/todos")
+    //   .then((res) => {
+    //     console.log(res);
+    //   }).catch(() => {
+    //     console.error("Error...!")
+    //   })
     try {
       let ApiResponse = await ApiExe("todos");
-      updateItem(ApiResponse?.data);
+      updateItem(ApiResponse?.data?.response);
     } catch (error) {
-      alert("Error occurs: " + JSON.stringify(error));
+      // alert("Error occurs: " + JSON.stringify(error));
+      console.warn(JSON.stringify(error))
     }
     // setTimeout(() => {
     //   updateItem([
@@ -68,8 +76,8 @@ function App() {
           {items.map((data, index) => (
 
             <div className="entry" key={index}>
-              <h1>{data.titile}</h1>
-              <p>{data.description}</p>
+              <h1>{data.task_name}</h1>
+              <p>{data.task_desc}</p>
             </div>
           ))}
 

@@ -6,11 +6,11 @@ async function ApiExe(url, method = "GET", params = {}) {
     };
     const instance = axios.create({
         baseURL: '/',
-        timeout: 1000,
         headers: header
     });
 
     let data = params?.data ?? {};
+
     return await instance({
         url,
         method,
